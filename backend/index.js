@@ -13,7 +13,7 @@ app.use(express.json());
 
 // CORS settings
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://mern-book-store-frontend-9qe2.onrender.com/',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type'],
 }));
