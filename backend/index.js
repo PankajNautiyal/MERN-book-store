@@ -29,7 +29,7 @@ const PORT = process.env.PORT || 5000;
 const mongoDBURL = process.env.MONGO_DB_URL;
 
 // MongoDB connection
-mongoose.connect(mongoDBURL,{ useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoDBURL)
     .then(() => {
         console.log('App connected to database');
         app.listen(PORT, () => {
