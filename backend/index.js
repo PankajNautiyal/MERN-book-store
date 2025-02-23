@@ -19,7 +19,7 @@ app.use(cors({
 }));
 
 app.get('/', (req, res) => {
-    console.log(req);
+    // console.log(req);
     return res.status(234).send('Welcome to MERN Stack');
 });
 
@@ -29,7 +29,7 @@ const PORT = process.env.PORT || 5000;
 const mongoDBURL = process.env.MONGO_DB_URL;
 
 // MongoDB connection
-mongoose.connect(mongoDBURL)
+mongoose.connect(mongoDBURL,{ useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('App connected to database');
         app.listen(PORT, () => {
