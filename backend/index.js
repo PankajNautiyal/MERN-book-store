@@ -13,7 +13,10 @@ app.use(express.json());
 
 // CORS settings
 app.use(cors({
-    origin: 'https://mern-book-store-frontend-9qe2.onrender.com/',
+    origin: [
+        'https://mern-book-store-frontend-9qe2.onrender.com',
+        'https://mern-book-store-frontend-9qe2.onrender.com/'
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type'],
 }));
